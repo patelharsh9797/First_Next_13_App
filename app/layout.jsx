@@ -1,4 +1,5 @@
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata = {
   title: "First Next 13 Project",
@@ -8,7 +9,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="mx-16 my-12">
+        <div className="mb-10 flex items-center justify-center">
+          <Link
+            href={"/"}
+            className="py-4 px-8 rounded-md text-3xl bg-cyan-600 text-neutral-900 font-bold"
+          >
+            My First Next.JS Project
+          </Link>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
